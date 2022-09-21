@@ -1,0 +1,1 @@
+# Contest-Scheduling-Discord-bot
