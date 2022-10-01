@@ -1,0 +1,40 @@
+import time
+import random
+import discord
+
+
+class MyClient(discord.Client):
+
+    async def on_ready(self):
+        print(f'Logged on as {self.user}!')
+
+
+    async def on_message(self, message):
+        print(f'Message from {message.author}: {message.content}')
+
+
+        if 'greet' in message.content:
+            channel = message.channel
+
+            def greet():
+                t = time.localtime()
+                if t.tm_hour < 12:
+                    return "Good Morning "
+                elif 12 < t.tm_hour < 16:
+                    return "Good Afternoon "
+                elif 16 < t.tm_hour < 19:
+                    return "Good evening "
+                elif 19 < t.tm_hour < 24:
+                    return "good night "
+
+            greet = greet()
+            await channel.send(f'{greet} {message.author} !')
+
+
+
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+client = MyClient(intents=intents)
+client.run('team member ? check discord : create your own')
