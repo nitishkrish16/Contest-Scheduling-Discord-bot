@@ -37,4 +37,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('team member ? check discord : create your own')
+client.run('team member ? check drive : create your own')
