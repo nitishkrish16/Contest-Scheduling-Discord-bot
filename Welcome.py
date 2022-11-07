@@ -3,8 +3,8 @@ import datetime
 
 client = discord.Client()
 
-welcomeMessage = # Enter your welcome message here.
-welcomeChannelID = # Enter the welcome channel's ID here.
+welcomeMessage = "Welcome!" # Enter your welcome message here.
+welcomeChannelID = "xyz"# Enter the welcome channel's ID here.
 botToken = # Enter your bot's token here.
 
 # Logging information for start-up.
